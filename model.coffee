@@ -11,10 +11,10 @@ class @DYWModel
     collection.allow
       insert: (userId, doc) =>
         instance = new this(doc)
-        instance.valid()
+        instance.valid() and @authorize.insert(userId, doc)
       update: (userId, doc) =>
         instance = new this(doc)
-        instance.valid()
+        instance.valid() and @authorize.update(userId, doc)
 
     if @deny
       collection.deny @deny()
@@ -26,6 +26,12 @@ class @DYWModel
     if _.isString(required_fields)
       required_fields = [required_fields]
     @_required_fields = required_fields
+
+  # Authorize by default
+  @authorize:
+    insert: (userId, doc) -> true
+    update: (userId, doc) -> true
+    remove: (userId, doc) -> true
 
   # Check if all required fields are given
   validate_presence: ->
