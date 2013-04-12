@@ -1,0 +1,8 @@
+{
+  "name": "dyw-models",
+  "description": "Simple collection models with validation",
+  "homepage": "https://github.com/dreamyourweb/meteor-dyw-models",
+  "author": "Andres Lamont  (http://dreamyourweb.nl)",
+  "version": "0.0.1",
+  "git": "https://github.com/dreamyourweb/meteor-dyw-models.git"
+}
