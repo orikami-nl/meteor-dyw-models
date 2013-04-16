@@ -29,7 +29,21 @@ Animal.insert({name: "dog", sound: "bark"})
  
 Animal.findOne({name: "raptor"}).makeNoise() # prints "roar"
 Animal.makeNoise() # prints ["roar","bark"]
+```
 
+#### Authorization
+
+```coffeescript
+  @authorize:
+    insert: (userId, doc) ->
+      # the user must be logged in, and the document must be owned by the user
+      return (userId && doc.owner === userId);
+    update: (userId, doc) ->
+      # the user must be logged in, and the document must be owned by the user
+      return (userId && doc.owner === userId);
+    destroy: (userId, doc) ->
+      # the user must be logged in, and the document must be owned by the user
+      return (userId && doc.owner === userId); 
 ```
 
 ### Todo
