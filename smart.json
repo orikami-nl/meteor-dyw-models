@@ -3,6 +3,6 @@
   "description": "Simple collection models with validation",
   "homepage": "https://github.com/dreamyourweb/meteor-dyw-models",
   "author": "Andres Lamont  (http://dreamyourweb.nl)",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "git": "https://github.com/dreamyourweb/meteor-dyw-models.git"
 }
