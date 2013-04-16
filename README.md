@@ -11,6 +11,7 @@ Define a model that uses Animals as its collection
 class @Animal extends DYWModel
   @collection "Animals" # Ruby style macro
  
+  # Check if the 'name' and 'sound' fields are set
   @validate_presence ["name","sound"]
  
   # Class method
@@ -43,7 +44,7 @@ Animal.makeNoise() # prints ["roar","bark"]
       return (userId && doc.owner === userId);
     destroy: (userId, doc) ->
       # the user must be logged in, and the document must be owned by the user
-      return (userId && doc.owner === userId); 
+      return (userId && doc.owner === userId);
 ```
 
 ### Todo
